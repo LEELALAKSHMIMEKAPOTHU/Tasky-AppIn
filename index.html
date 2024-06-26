@@ -15,6 +15,30 @@ rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3
 
 </head>
 <body>
+<!-- mobile toggler button for adding a new item -->
+ <div class="add__new__btn__mobile__only">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="addNewModal">
+    <i class="fa-solid fa-plus"></i>Add New Item</button>
+    </div>
+    
+  <!--  modal adding -->
+  <div class="modal fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addNewModalLabel">Add New Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Navbar -->
  <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -39,15 +63,14 @@ rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3
       </ul>
 
 <!-- add a Task -->
-        <button class="btn btn-outline-primary" type="submit">
+        <button class="btn btn-outline-primary" type="submit" data-bs-toggle="modal" data-bs-target="#addNewModal">
           <i class="fa-solid fa-plus"></i>Add New Item</button>
     
     </div>
   </div>
 </nav>
 
-
-
+<!-- main container -->
 <div class="container text-center">
 <section class="mt-4">
 <div class="row justify-content-center">
@@ -62,7 +85,20 @@ rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3
   </div>
 </div>
 </section>
+  
+<!--  -->
+<section  class="mt-4">
+<div class="row task__contents">
+  <div class="col">
+
+  </div>
 </div>
+
+</section>
+</div>
+
+
+
 <!-- custom js file -->
 <script src="index.js"></script>
 <!-- bootstrap cdn -->
